@@ -72,6 +72,7 @@ def delete_record(id: int, api_key: str):
       return {"status": "Denied", "message": "you don't have permission to delete record"}
     record_found = False
 
+    # crude way of deleting a record by rewriting the CSV without the target record
     with open(CSV_FILE, mode='r', newline='') as file:
         reader = csv.DictReader(file)
         for row in reader:

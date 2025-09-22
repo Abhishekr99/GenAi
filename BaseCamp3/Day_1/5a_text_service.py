@@ -39,14 +39,14 @@ class TextInput(BaseModel):
 
 @app.post("/count")
 def add(text: TextInput):
-    """Add two numbers and return the result."""
+    """counts the number of words in the input text and returns the count."""
     result = len(text.a.split())
     return {f"length of string: {result} words"}
 
 
 @app.post("/split")
 def subtract(text: TextInput):
-    """Subtract b from a and return the result."""
+    """splits text into words and returns the list of words."""
     result = text.a.split()
     return result
 
@@ -54,7 +54,7 @@ def subtract(text: TextInput):
 @app.get("/")
 def read_root():
     """Root endpoint that returns a welcome message."""
-    return {"message": "Calculator API is running. Use /add or /subtract endpoints."}
+    return {"message": "text service API is running. Use /count or /split endpoints."}
 
 
 # Main program

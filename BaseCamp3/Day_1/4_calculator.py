@@ -28,6 +28,7 @@ class CalculationInput(BaseModel):
         }
     }
 
+#gives structure to output result
 class CalculationResult(BaseModel):
     operation: str
     a: float

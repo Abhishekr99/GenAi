@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-CSV_FILE = "6a_products.csv"
+CSV_FILE = "C:\\Users\\Manjula\\abi\\AIEF\\GenAIEngineering-Cohort3\\BaseCamp3\\Day_1\\6a_products.csv"
 
 # Define the data model
 class Record(BaseModel):

@@ -19,7 +19,7 @@ def subtract(a, b):
     # result = a-b
     return {"operation": "subtract", "a": a, "b": b, "result": result}
 
-@app.get("/")
+@app.get("/") #this is root endpoint
 def read_root():
     """Root endpoint that returns a welcome message."""
     return {"message": "Calculator API is running. Use /add or /subtract endpoints."}
